@@ -1,0 +1,21 @@
+/* Your app custom styles here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	button {
+		@apply active:opacity-55 duration-75 transition-opacity;
+	}
+	.sender {
+		@apply bg-blue-200 ml-auto rounded px-4 py-2 max-w-xs w-max;
+	}
+	.receiver {
+		@apply bg-zinc-200 rounded px-4 py-2 max-w-xs w-max;
+	}
+}
+
+/* .searchbar-input-wrap,
+.searchbar-input-wrap input {
+	border-radius: 40px;
+} */

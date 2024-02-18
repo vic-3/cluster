@@ -1,0 +1,62 @@
+{
+	"name": "twapp",
+	"private": true,
+	"version": "1.0.0",
+	"description": "twapp",
+	"repository": "",
+	"license": "UNLICENSED",
+	"scripts": {
+		"dev": "vite --port 3000",
+		"start": "vite --host --port 3000",
+		"lint": "eslint src --ext js,jsx --fix --report-unused-disable-directives --max-warnings 0",
+		"build": "cross-env NODE_ENV=production vite build",
+		"build-capacitor-ios": "cross-env NODE_ENV=production vite build && npx cap copy ios",
+		"build-capacitor-android": "cross-env NODE_ENV=production vite build && npx cap copy android",
+		"postinstall": "cpy --flat ./node_modules/framework7-icons/fonts/*.* ./src/fonts/ && cpy --flat ./node_modules/material-icons/iconfont/*.* ./src/fonts/"
+	},
+	"browserslist": [
+		"IOS >= 15",
+		"Safari >= 15",
+		"last 5 Chrome versions",
+		"last 5 Firefox versions"
+	],
+	"dependencies": {
+		"@capacitor/android": "^5.1.0",
+		"@capacitor/app": "^5.0.5",
+		"@capacitor/browser": "^5.0.5",
+		"@capacitor/core": "^5.1.0",
+		"@capacitor/haptics": "^5.0.6",
+		"@capacitor/ios": "^5.1.0",
+		"@capacitor/keyboard": "^5.0.5",
+		"@capacitor/splash-screen": "^5.0.5",
+		"@capacitor/status-bar": "^5.0.5",
+		"@heroicons/react": "^2.0.18",
+		"autoprefixer": "^10.4.14",
+		"dom7": "^4.0.6",
+		"firebase": "^10.8.0",
+		"framework7": "^8.1.0",
+		"framework7-icons": "^5.0.5",
+		"framework7-react": "^8.1.0",
+		"konsta": "^2.0.0",
+		"material-icons": "^1.13.8",
+		"prop-types": "^15.8.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"skeleton-elements": "^4.0.1",
+		"swiper": "^10.0.4",
+		"tailwindcss": "^3.3.2"
+	},
+	"devDependencies": {
+		"@capacitor/cli": "^5.1.0",
+		"@vitejs/plugin-react": "^4.0.1",
+		"cordova-res": "^0.15.4",
+		"cpy-cli": "^5.0.0",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.38.0",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.3.4",
+		"postcss-preset-env": "^9.0.0",
+		"vite": "^4.3.9"
+	}
+}
